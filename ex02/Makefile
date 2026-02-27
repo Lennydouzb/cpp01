@@ -1,11 +1,8 @@
 CXX=c++
 CXXFLAGS = -Wall -Werror -Wextra -g -std=c++98
-NAME = zombie
+NAME = thisisbrain
 SRC_DIR = ./
 SRCS = $(SRC_DIR)main.cpp \
-	   $(SRC_DIR)newZombie.cpp \
-	   $(SRC_DIR)randomChump.cpp \
-	   $(SRC_DIR)Zombie.cpp
 
 OBJ_DIR = .build/
 OBJS = $(SRCS:$(SRC_DIR)%.cpp=$(OBJ_DIR)%.o)

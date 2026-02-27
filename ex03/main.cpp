@@ -5,24 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 19:56:57 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/02/26 20:10:55 by ldesboui         ###   ########.fr       */
+/*   Created: 2026/02/27 16:57:35 by ldesboui          #+#    #+#             */
+/*   Updated: 2026/02/27 17:49:41 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-#include "../includes/Zombie.hpp"
-
-int	main(void)
+int main()
 {
-	std::cout << "creation with zombie :";
-	Zombie z = Zombie("1");
-	z.announce();
-	std::cout << "creation with newZombie :";
-	Zombie *zptr = newZombie("2");
-	zptr->announce();
-	std::cout << "creation and announce with randomchump, it should also destroy itself just after announcement:";
-	randomChump("3");
-	std::cout << "destruction of 2, (newZombie): ";
-	delete zptr;
-	return (0);
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return 0;
 }

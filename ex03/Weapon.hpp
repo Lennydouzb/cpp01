@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 19:37:51 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/02/26 19:54:52 by ldesboui         ###   ########.fr       */
+/*   Created: 2026/02/27 16:38:35 by ldesboui          #+#    #+#             */
+/*   Updated: 2026/02/27 17:01:53 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/Zombie.hpp"
+#pragma once
+#include <string>
 
-Zombie::Zombie(std::string name)
+class Weapon
 {
-	this->name = name;
-}
-
-void Zombie::announce(void)
-{
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-Zombie::~Zombie(void)
-{
-	std::cout << this->name << " has been destructed" << std::endl;
-}
+private:
+	std::string type;
+public:
+	std::string getType();
+	void		setType(std::string type);
+	Weapon( void );
+	Weapon(std::string type);
+};
