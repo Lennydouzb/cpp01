@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 17:53:57 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/02/27 19:00:35 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/03/06 11:12:57 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "includes.h"
@@ -52,7 +52,7 @@ int main(int ac, char **av)
 	buffer << infile.rdbuf();
 	filecontent = buffer.str();
 	std::string	replaced = transform(filecontent, av[2], av[3]);
-	outfile << replaced;
+	outfile << replaced << std::endl;
 	outfile.close();
 	infile.close();
 }
