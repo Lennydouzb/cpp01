@@ -6,9 +6,10 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 16:45:14 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/02/27 17:40:34 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/03/06 13:37:29 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#pragma once
 #include "Weapon.hpp"
 
 class HumanA
