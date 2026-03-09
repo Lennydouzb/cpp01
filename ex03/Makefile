@@ -1,6 +1,6 @@
 CXX=c++
 CXXFLAGS = -Wall -Werror -Wextra -g -std=c++98
-NAME = thisisbrain
+NAME = humans
 SRC_DIR = ./
 SRCS = $(SRC_DIR)main.cpp \
 	   $(SRC_DIR)HumanB.cpp \

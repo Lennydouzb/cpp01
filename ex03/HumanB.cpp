@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 16:53:56 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/02/27 17:44:11 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/03/09 00:41:24 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "HumanB.hpp"
@@ -32,7 +32,7 @@ void HumanB::attack()
 		std::cout << this->name <<  " attacks with their " << this->aWeapon->getType() << std::endl;
 }
 
-void	HumanB::setWeapon(::Weapon &aWeapon)
+void	HumanB::setWeapon(Weapon &aWeapon)
 {
 	this->aWeapon = &aWeapon;
 }
